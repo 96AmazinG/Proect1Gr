@@ -217,7 +217,7 @@ double* AddItem(double *m, int size_m, double item, int index)
 double* RemoveItemIndex(double* m, int size_m, int index)
 {
     if (m == NULL || index < 0 || index >= size_m) return m;
-    double* t = new double[size_m + 1];
+    double* t = new double[size_m - 1];
     CopyArray(m, t, index);
     CopyArray(m+index+1, t+index, size_m - index);
     delete m;
